@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using WebAppProject.Models;
+using WebAppProject.Services;
 
 namespace WebAppProject.Controllers
 {
@@ -17,6 +18,7 @@ namespace WebAppProject.Controllers
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
+            this.configuration = configuration;
         }
         public IActionResult Register()
         {
