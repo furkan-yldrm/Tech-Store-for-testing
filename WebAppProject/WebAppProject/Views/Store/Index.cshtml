@@ -35,7 +35,7 @@
     </div>
     <div class="col-lg-6 col-md-12 d-flex">
         <input class="form-control me-2" name="search" asp-for="Search" placeholder="Search by Name">
-        <button class="btn btn-outline-success" type="submit">Ara</button>
+        <button class="btn btn-outline-success" type="submit" id="StoreSearch">Ara</button>
     </div>
 </form>
 
@@ -53,8 +53,8 @@
                 </p>
                 <h4 class="mb-3">@(product.Price)$</h4>
                 <a class="btn btn-primary btn-sm mb-2" asp-controller="Store"
-                   asp-action="Details" asp-route-id="@product.Id" role="button">Detay</a>
-                <button type="button" class="btn btn-warning btn-sm mb-2" onclick="addToCart(this, @product.Id)">
+                   asp-action="Details" asp-route-id="@product.Id" role="button" id="StoreDetay">Detay</a>
+                <button type="button" class="btn btn-warning btn-sm mb-2" onclick="addToCart(this, @product.Id)" id="StoreAddCart2" >
                     Sepete Ekle <i class="bi bi-cart4"></i>
                 </button>
             </div>

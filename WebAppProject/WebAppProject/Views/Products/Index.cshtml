@@ -30,8 +30,8 @@
     </div>
     <div class="col">
         <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" name="search" value="@search" placeholder="Search by Name or Brand" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <input class="form-control me-2" type="search" name="search" value="@search" placeholder="Search by Name or Brand" aria-label="Search" id="SearchProduct">
+            <button class="btn btn-outline-success" type="submit" id="SearchButton">Search</button>
         </form>
     </div>
 </div>
@@ -76,10 +76,10 @@
                 <td><img src="/products/@product.ImageFileName" width="100" /></td>
                 <td>@product.CreatedAt.ToString("dd/dd/yyyy")</td>
                 <td style="white-space:nowrap">
-                    <a class="btn btn-primary btn-sm" asp-controller="Products" asp-action="Edit" 
-                        asp-route-id="@product.Id">Düzenle</a>
+                    <a class="btn btn-primary btn-sm" asp-controller="Products" asp-action="Edit"
+                       asp-route-id="@product.Id" id="DüzenleProduct">Düzenle</a>
                     <a class="btn btn-danger btn-sm" asp-controller="Products" asp-action="Delete"
-                        asp-route-id="@product.Id" onclick="return confirm('Are you sure?')">Sil</a>
+                       asp-route-id="@product.Id" onclick="return confirm('Are you sure?')" id="SilProduct">Sil</a>
                 </td>
             </tr>
         }

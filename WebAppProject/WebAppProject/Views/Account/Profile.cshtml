@@ -69,11 +69,11 @@
 		<hr />
 
 		<div>
-			<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#EditProfileModal">
+			<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#EditProfileModal" id="EditProfile">
 				Profili Düzenle
 			</button>
 
-			<a class="btn btn-warning btn-sm" asp-controller="Account" asp-action="Password" name="DegistirPass">Şifreyi Değiştir</a>
+			<a class="btn btn-warning btn-sm" asp-controller="Account" asp-action="Password" id="DegistirPass">Şifreyi Değiştir</a>
 		</div>
 
 	</div>
@@ -84,7 +84,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<h1 class="modal-title fs-5">Profili Düzenle</h1>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" name="EditPass"></button>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="EditPass"></button>
 			</div>
 			<div class="modal-body">
 
@@ -92,7 +92,7 @@
 					<div class="row mb-2">
 						<label class="col-sm-4 col-form-label">Ad</label>
 						<div class="col-sm-8">
-							<input class="form-control" asp-for="FirstName" name="EditAd">
+							<input class="form-control" asp-for="FirstName" id="EditAd">
 							<span asp-validation-for="FirstName" class="text-danger"></span>
 						</div>
 					</div>
@@ -100,7 +100,7 @@
 					<div class="row mb-2">
 						<label class="col-sm-4 col-form-label">Soyad</label>
 						<div class="col-sm-8">
-							<input class="form-control" asp-for="LastName" name="EditSoyad">
+							<input class="form-control" asp-for="LastName" id="EditSoyad">
 							<span asp-validation-for="LastName" class="text-danger"></span>
 						</div>
 					</div>
@@ -108,7 +108,7 @@
 					<div class="row mb-2">
 						<label class="col-sm-4 col-form-label">Email</label>
 						<div class="col-sm-8">
-							<input class="form-control" asp-for="Email" name="EditEmail">
+							<input class="form-control" asp-for="Email" id="EditEmail">
 							<span asp-validation-for="Email" class="text-danger"></span>
 						</div>
 					</div>
@@ -116,7 +116,7 @@
 					<div class="row mb-2">
 						<label class="col-sm-4 col-form-label">Telefon</label>
 						<div class="col-sm-8">
-							<input class="form-control" asp-for="PhoneNumber" name="EditTel">
+							<input class="form-control" asp-for="PhoneNumber" id="EditTel">
 							<span asp-validation-for="PhoneNumber" class="text-danger"></span>
 						</div>
 					</div>
@@ -124,14 +124,14 @@
 					<div class="row mb-2">
 						<label class="col-sm-4 col-form-label">Adres</label>
 						<div class="col-sm-8">
-							<input class="form-control" asp-for="Address" name="EditAdres">
+							<input class="form-control" asp-for="Address" id="EditAdres">
 							<span asp-validation-for="Address" class="text-danger"></span>
 						</div>
 					</div>
 
 					<div class="row">
 						<div class="offset-sm-4 col-sm-8">
-							<button type="submit" class="btn btn-primary" name="EditOnayla">Onayla</button>
+							<button type="submit" class="btn btn-primary" id="EditOnayla">Onayla</button>
 						</div>
 					</div>
 
@@ -139,7 +139,7 @@
 
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" name="EditKapat">Kapat</button>
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="EditKapat">Kapat</button>
 			</div>
 		</div>
 	</div>

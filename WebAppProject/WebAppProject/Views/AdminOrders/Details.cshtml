@@ -76,10 +76,10 @@
                 <div class="col">Ödeme Durumu</div>
                 <div class="col">
                     <span class="badge rounded-pill @paymentBadgeColor">@Model.PaymentStatus</span>
-                    <a href="#" class="mx-2" data-bs-toggle="modal" data-bs-target="#paymentStatusModal">
+                    <a href="#" class="mx-2" data-bs-toggle="modal" data-bs-target="#paymentStatusModal" id="EditOrder">
                         Düzenle
                     </a>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#paymentDetailsModal">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#paymentDetailsModal" id="OrderDetay">
                         Detay
                     </a>
 
@@ -90,7 +90,7 @@
                 <div class="col">Sipariş Durumu</div>
                 <div class="col">
                     <span class="badge rounded-pill @orderBadgeColor">@Model.OrderStatus</span>
-                    <a href="#" class="ms-2" data-bs-toggle="modal" data-bs-target="#orderStatusModal">
+                    <a href="#" class="ms-2" data-bs-toggle="modal" data-bs-target="#orderStatusModal" id="EditOrder2">
                         Düzenle
                     </a>
                 </div>
@@ -211,7 +211,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5">Ödeme Durumu Değiştir</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="EditOdeme"></button>
             </div>
             <div class="modal-body">
 
@@ -223,12 +223,12 @@
                         <option value="accepted">kabul edildi</option>
                         <option value="canceled">iptal</option>
                     </select>
-                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                    <button type="submit" class="btn btn-primary" id="EditOdemeKaydet">Kaydet</button>
                 </form>
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="EditOdemeKapat">Kapat</button>
             </div>
         </div>
     </div>

@@ -71,7 +71,7 @@
 
 
 					<span class="badge rounded-pill @color">@rolesStr</span>
-					<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#roleModal">
+					<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#roleModal" id="EditUser">
 						Edit
 					</button>
 				}
@@ -86,9 +86,9 @@
 		<hr />
 
 		<div>
-			<a class="btn btn-primary" asp-controller="Users" asp-action="Index">Back</a>
+			<a class="btn btn-primary" asp-controller="Users" asp-action="Index" id="UserBack">Back</a>
 
-			<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+			<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" id="DeleteUser">
 				Delete
 			</button>
 		</div>

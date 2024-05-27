@@ -77,10 +77,10 @@
 
                 <div class="row">
                     <div class="col d-grid">
-                        <a class="btn btn-light" asp-controller="Account" asp-action="Register">Kayıt Ol</a>
+                        <a class="btn btn-light" asp-controller="Account" asp-action="Register" id="CartRegister">Kayıt Ol</a>
                     </div>
                     <div class="col d-grid">
-                        <a class="btn btn-outline-light" asp-controller="Account" asp-action="Login">Giriş Yap</a>
+                        <a class="btn btn-outline-light" asp-controller="Account" asp-action="Login" id="CartLogin">Giriş Yap</a>
                     </div>
                 </div>
             }
@@ -89,7 +89,7 @@
                 <form method="post">
                     <div class="mb-3">
                         <label class="form-label">Teslimat Adresi</label>
-                        <input type="text" class="form-control" asp-for="DeliveryAddress">
+                        <input type="text" class="form-control" asp-for="DeliveryAddress" id="CartAdres">
                         <span asp-validation-for="DeliveryAddress" class="text-warning"></span>
                     </div>
 
@@ -133,7 +133,7 @@
 
 
                     <div class="d-grid">
-                        <button class="btn btn-outline-light" type="submit">Onayla</button>
+                        <button class="btn btn-outline-light" type="submit" id="CartOnayla">Onayla</button>
                     </div>
                 </form>
             }
