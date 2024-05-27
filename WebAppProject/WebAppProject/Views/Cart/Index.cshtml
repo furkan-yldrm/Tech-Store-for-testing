@@ -55,7 +55,7 @@
     </div>
     <div class="col-md-4">
         <div class="text-white rounded my-2 p-3" style="background-color: #08618d;">
-            <h4>Order Summary</h4>
+            <h4>Sipariş Özeti</h4>
             <hr />
 
 
@@ -77,10 +77,10 @@
 
                 <div class="row">
                     <div class="col d-grid">
-                        <a class="btn btn-light" asp-controller="Account" asp-action="Register">Register</a>
+                        <a class="btn btn-light" asp-controller="Account" asp-action="Register">Kayıt Ol</a>
                     </div>
                     <div class="col d-grid">
-                        <a class="btn btn-outline-light" asp-controller="Account" asp-action="Login">Login</a>
+                        <a class="btn btn-outline-light" asp-controller="Account" asp-action="Login">Giriş Yap</a>
                     </div>
                 </div>
             }
@@ -88,17 +88,16 @@
             {
                 <form method="post">
                     <div class="mb-3">
-                        <label class="form-label">Delivery Address</label>
+                        <label class="form-label">Teslimat Adresi</label>
                         <input type="text" class="form-control" asp-for="DeliveryAddress">
                         <span asp-validation-for="DeliveryAddress" class="text-warning"></span>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Payment Method</label>
+                        <label class="form-label">Ödeme Yöntemi</label>
                         <select class="form-select" asp-for="PaymentMethod">
-                            <option value="cash">Cash on Delivery</option>
-                            <option value="credit_card">Credit Card</option>
-                            <option value="paypal">Paypal</option>
+                            <option value="cash">Nakit</option>
+                            <option value="credit_card">Kart</option>
                         </select>
                     </div>
 
@@ -107,7 +106,7 @@
 
                     <div class="row">
                         <div class="col">
-                            <p>Subtotal:</p>
+                            <p>Ara Toplam:</p>
                         </div>
                         <div class="col">
                             <p class="text-end">@(ViewBag.Subtotal)$</p>
@@ -116,7 +115,7 @@
 
                     <div class="row">
                         <div class="col">
-                            <p>Shipping:</p>
+                            <p>Kargo:</p>
                         </div>
                         <div class="col">
                             <p class="text-end">@(ViewBag.ShippingFee)$</p>
@@ -125,7 +124,7 @@
 
                     <div class="row">
                         <div class="col">
-                            <p>Total:</p>
+                            <p>Toplam:</p>
                         </div>
                         <div class="col">
                             <p class="text-end">@(ViewBag.Total)$</p>
@@ -134,7 +133,7 @@
 
 
                     <div class="d-grid">
-                        <button class="btn btn-outline-light" type="submit">Checkout</button>
+                        <button class="btn btn-outline-light" type="submit">Onayla</button>
                     </div>
                 </form>
             }

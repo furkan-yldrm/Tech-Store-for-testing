@@ -11,17 +11,17 @@
 
         <form method="post">
             <div class="row mb-3">
-                <label class="col-sm-4 col-form-label">Isim</label>
+                <label class="col-sm-4 col-form-label">Ad</label>
                 <div class="col-sm-8">
-                    <input class="form-control" asp-for="FirstName">
+                    <input class="form-control" asp-for="FirstName" name="KayitAd">
                     <span asp-validation-for="FirstName" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-4 col-form-label">Soyisim</label>
+                <label class="col-sm-4 col-form-label">Soyad</label>
                 <div class="col-sm-8">
-                    <input class="form-control" asp-for="LastName">
+                    <input class="form-control" asp-for="LastName" name="KayitSoyad">
                     <span asp-validation-for="LastName" class="text-danger"></span>
                 </div>
             </div>
@@ -29,7 +29,7 @@
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">Email</label>
                 <div class="col-sm-8">
-                    <input class="form-control" asp-for="Email">
+                    <input class="form-control" asp-for="Email" name="KayitEmail">
                     <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
             </div>
@@ -37,7 +37,7 @@
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">Telefon</label>
                 <div class="col-sm-8">
-                    <input class="form-control" asp-for="PhoneNumber">
+                    <input class="form-control" asp-for="PhoneNumber" name="KayitTel">
                     <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                 </div>
             </div>
@@ -45,7 +45,7 @@
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">Adres</label>
                 <div class="col-sm-8">
-                    <input class="form-control" asp-for="Address">
+                    <input class="form-control" asp-for="Address" name="KayitAdres">
                     <span asp-validation-for="Address" class="text-danger"></span>
                 </div>
             </div>
@@ -53,7 +53,7 @@
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">Şifre</label>
                 <div class="col-sm-8">
-                    <input class="form-control" type="password" asp-for="Password">
+                    <input class="form-control" type="password" asp-for="Password" name="KayitPass">
                     <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
             </div>
@@ -61,7 +61,7 @@
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">Şifreyi Onayla</label>
                 <div class="col-sm-8">
-                    <input class="form-control" type="password" asp-for="ConfirmPassword">
+                    <input class="form-control" type="password" asp-for="ConfirmPassword" name="KayitOnayPass">
                     <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                 </div>
             </div>
@@ -69,10 +69,10 @@
 
             <div class="row mb-3">
                 <div class="offset-sm-4 col-sm-4 d-grid">
-                    <button type="submit" class="btn btn-primary">Kayıt Ol</button>
+                    <button type="submit" class="btn btn-primary" name="KayitButton">Kayıt Ol</button>
                 </div>
                 <div class="col-sm-4 d-grid">
-                    <a class="btn btn-outline-primary" asp-controller="Home" asp-action="Index" role="button">
+                    <a class="btn btn-outline-primary" asp-controller="Home" asp-action="Index" role="button" name="KayitIptal">
                         Iptal
                     </a>
                 </div>
