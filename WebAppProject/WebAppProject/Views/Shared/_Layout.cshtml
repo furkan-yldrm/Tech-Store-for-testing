@@ -143,7 +143,7 @@
                     <ul class="navbar-nav me-2">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Cart" asp-action="Index" id="SharedCart">
-                                <i class="bi bi-cart4 text-danger h3"></i>
+                                <i class="bi bi-cart4 text-danger h3" id="CartSign"></i>
                                 <span id="CartSize" class="badge rounded-pill bg-danger" style="vertical-align: top">
                                  @CartHelper.GetCartSize(Context.Request, Context.Response)
                                 </span>

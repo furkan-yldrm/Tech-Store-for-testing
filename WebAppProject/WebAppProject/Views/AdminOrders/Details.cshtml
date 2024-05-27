@@ -1,46 +1,46 @@
 ﻿@model Order
 @{
     string paymentBadgeColor = "bg-danger";
-    if (Model.PaymentStatus == "pending")
+    if (Model.PaymentStatus == "bekliyor")
     {
         paymentBadgeColor = "bg-warning text-dark";
     }
-    else if (Model.PaymentStatus == "accepted")
+    else if (Model.PaymentStatus == "kabul edildi")
     {
         paymentBadgeColor = "bg-success";
     }
-    else if (Model.PaymentStatus == "canceled")
+    else if (Model.PaymentStatus == "iptal edildi")
     {
         paymentBadgeColor = "bg-secondary";
     }
 
 
     string orderBadgeColor = "bg-danger";
-    if (Model.OrderStatus == "created")
+    if (Model.OrderStatus == "oluşturuldu")
     {
         orderBadgeColor = "bg-warning text-dark";
     }
-    else if (Model.OrderStatus == "accepted")
+    else if (Model.OrderStatus == "kabul edildi")
     {
         orderBadgeColor = "bg-success";
     }
-    else if (Model.OrderStatus == "canceled")
+    else if (Model.OrderStatus == "iptal edildi")
     {
         orderBadgeColor = "bg-secondary";
     }
-    else if (Model.OrderStatus == "shipped")
+    else if (Model.OrderStatus == "kargolandı")
     {
         orderBadgeColor = "bg-primary";
     }
-    else if (Model.OrderStatus == "delivered")
+    else if (Model.OrderStatus == "teslim edildi")
     {
         orderBadgeColor = "bg-success";
     }
-    else if (Model.OrderStatus == "returned")
+    else if (Model.OrderStatus == "iade edildi")
     {
         orderBadgeColor = "bg-info text-dark";
     }
-    else if (Model.OrderStatus == "deleted")
+    else if (Model.OrderStatus == "silindi")
     {
         orderBadgeColor = "bg-dark";
     }

@@ -26,7 +26,7 @@
 
 <div class="row mb-5">
     <div class="col">
-        <a class="btn btn-primary" asp-controller="Products" asp-action="Create">Ürün Ekle</a>
+        <a class="btn btn-primary" asp-controller="Products" asp-action="Create" id="AddProducts">Ürün Ekle</a>
     </div>
     <div class="col">
         <form class="d-flex" role="search">
@@ -77,7 +77,7 @@
                 <td>@product.CreatedAt.ToString("dd/dd/yyyy")</td>
                 <td style="white-space:nowrap">
                     <a class="btn btn-primary btn-sm" asp-controller="Products" asp-action="Edit"
-                       asp-route-id="@product.Id" id="DüzenleProduct">Düzenle</a>
+                       asp-route-id="@product.Id" id="DuzenleProduct">Düzenle</a>
                     <a class="btn btn-danger btn-sm" asp-controller="Products" asp-action="Delete"
                        asp-route-id="@product.Id" onclick="return confirm('Are you sure?')" id="SilProduct">Sil</a>
                 </td>

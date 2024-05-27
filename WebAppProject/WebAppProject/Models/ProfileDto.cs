@@ -14,7 +14,8 @@ namespace WebAppProject.Models
 		public string Email { get; set; } = "";
 
 		[Phone(ErrorMessage = "Format geçersiz!"), MaxLength(20)]
-		public string? PhoneNumber { get; set; }
+        [RegularExpression(@"^(05(\d{9}))$", ErrorMessage = "Girilen format yanlış!!.")]
+        public string? PhoneNumber { get; set; }
 
 		[Required, MaxLength(200)]
 		public string Address { get; set; } = "";

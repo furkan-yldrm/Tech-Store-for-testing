@@ -13,7 +13,8 @@ namespace WebAppProject.Models
         [Required, EmailAddress, MaxLength(100)]
         public string Email { get; set; } = "";
 
-        [Phone(ErrorMessage = "Yanlış format!"), MaxLength(20)]
+        [Required, Phone(ErrorMessage = "Telefon numarası 11 haneden fazla olamaz!!"), MaxLength(11)]
+        [RegularExpression(@"^(05(\d{9}))$", ErrorMessage = "Girilen format yanlış!!.")]
         public string? PhoneNumber { get; set; }
 
         [Required, MaxLength(200)]

@@ -226,7 +226,6 @@ namespace WebAppProject.Controllers
             }
 
 
-            // update the image file if we have a new image file
             string newFileName = product.ImageFileName;
             if (productDto.ImageFile != null)
             {
@@ -239,13 +238,12 @@ namespace WebAppProject.Controllers
                     productDto.ImageFile.CopyTo(stream);
                 }
 
-                // delete the old image
+                
                 string oldImageFullPath = environment.WebRootPath + "/products/" + product.ImageFileName;
                 System.IO.File.Delete(oldImageFullPath);
             }
 
-
-            // update the product in the database
+ 
             product.Name = productDto.Name;
             product.Brand = productDto.Brand;
             product.Category = productDto.Category;
